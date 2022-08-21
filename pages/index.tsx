@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
   });
   return {
     props: { feed },
-    revalidate: 10,
+    revalidate: 10, // enables Incremental Static Site Generation; will trigger update of served static page content if more than 10 seconds passed since last request by some client
   };
 };
 
